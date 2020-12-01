@@ -12,7 +12,7 @@ const Chat = () => {
 	const [users, setUsers] = useState([]);
 
 	useEffect(() => {
-		socket = io("http://localhost:4000");
+		socket = io("https://safe-escarpment-19423.herokuapp.com/");
 
 		socket.emit("join", { name, room }, (error) => {
 			if (error) {
